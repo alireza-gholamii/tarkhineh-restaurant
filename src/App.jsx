@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './components/shared/Navbar';
+import Homepage from './components/Homepage';
 
 // styles
 import "./styles/fonts.css"
@@ -8,7 +8,7 @@ import "./styles/fonts.css"
 const App = () => {
   return (
     <>
-      <Navbar />
+      <Homepage />
     </>
   );
 };
