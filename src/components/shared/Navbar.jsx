@@ -1,8 +1,5 @@
 import React from 'react';
 
-//styles
-import styles from "./Navbar.module.css"
-
 //picure
 import logo from "../../img/icons/logo.svg"
 import hamburgerMenu from "../../img/icons/menu.svg"
@@ -14,7 +11,7 @@ import user from "../../img/icons/user.svg"
 const Navbar = () => {
     return (
         <>
-           <div className={`flex justify-between p-6 ${styles.fontEstedad}`}>
+           <div className='flex justify-between p-6 fontEstedad'>
                 
                 <div className="order-first md:order-2 flex">
                     
