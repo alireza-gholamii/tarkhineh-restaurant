@@ -69,8 +69,8 @@ const Slider = () => {
                                     onClick={() => setCurrentIndex(index)}>
                                         <button className=''>
                                             {index === currentIndex ? 
-                                                <img src={slideButtons[0]} /> :
-                                                <img src={slideButtons[1]}/>
+                                                <img className='w-4' src={slideButtons[0]} /> :
+                                                <img className='w-2' src={slideButtons[1]}/>
                                             }
                                         </button>
                                     </li>
@@ -80,12 +80,12 @@ const Slider = () => {
             </div>
             <div
                 onClick={nextSlide}  
-                className='group-hover:block absolute hidden top-[45%] left-6 text-xl sm:text-4xl bg-black/20 text-white cursore-pointer'>
+                className='group-hover:block cursor-pointer absolute hidden top-[45%] left-6 text-xl sm:text-4xl bg-black/20 text-white cursore-pointer'>
                 <img src={leftArrow} alt="arrow" />
             </div>
             <div
                 onClick={preveSlide}
-                className='group-hover:block absolute hidden top-[45%] right-6 text-xl sm:text-4xl text-white cursore-pointer'>
+                className='group-hover:block cursor-pointer absolute hidden top-[45%] right-6 text-xl sm:text-4xl text-white cursore-pointer'>
                 <img src={rightArrow} alt="arrow" />
             </div>
         </div>
