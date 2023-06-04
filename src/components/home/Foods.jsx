@@ -17,7 +17,7 @@ const Foods = () => {
                     placeholder='جستجو'/>
             </div>
             <h1 className='flex mt-4 justify-center fontEstedad text-2xl font-bold'>منوی رستوران</h1>
-            <div className='grid  grid-cols-2 md:grid-cols-4 gap-y-15 mt-[5%]'>
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-y-15 mt-[5%]'>
                 <Food img={drink} />
                 <Food img={dessert} />
                 <Food img={starter} />
