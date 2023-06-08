@@ -1,4 +1,7 @@
 @font-face {
     font-family: 'Estedad';
     src: url("../fonts/webfonts/variable/Estedad-FD.woff2") format('woff');
+}@font-face {
+    font-family: 'Estedad-vf';
+    src: url("../fonts/webfonts/variable/Estedad.woff2") format('woff');
 }
