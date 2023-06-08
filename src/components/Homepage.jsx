@@ -3,6 +3,8 @@ import Navbar from './shared/Navbar';
 import Slider from './home/Slider';
 import Foods from './home/Foods';
 import About from './home/About';
+import TarkhinehGardi from './home/TarkhinehGardi';
+import Footer from './home/Footer';
 
 const Homepage = () => {
     return (
@@ -11,6 +13,8 @@ const Homepage = () => {
             <Slider />
             <Foods/>
             <About />
+            <TarkhinehGardi />
+            <Footer />
         </div>
     );
 };
