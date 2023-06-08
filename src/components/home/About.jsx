@@ -19,7 +19,7 @@ const About = () => {
                 مهمان‌نوازی یکی از مهم‌ترین مشخصه‌های ایرانیان است و باعث افتخار ماست که بیش از 20 سال است خدمت‌گزار مردم شریف ایران هستیم. ما در رستوران‌های زنجیره‌ای ترخینه همواره تلاش کردیم که در محیطی اصیل بر پایه معماری و طراحی مدرن در کنار طبیعتی دلنواز، غذایی سالم و درخور شان شما عزیزان ارائه دهیم.
                 </p>
                 <div className='flex justify-center w-[105%]'>
-                     <a className='border-solid border-[1px] w-[154px] sm:w-[184] h-[32px] sm:h-[40px] flex row gap-2 justify-center items-center border-white rounded ' href='#'>اطلاعات بیشتر<img className='sm:w-[24px] w-[16px]' src={arrowLeft}/></a>
+                    <a className='border-solid border-[1px] w-[154px] sm:w-[184] h-[32px] sm:h-[40px] flex row gap-2 justify-center items-center border-white rounded ' href='#'>اطلاعات بیشتر<img className='sm:w-[24px] w-[16px]' src={arrowLeft}/></a>
                 </div>
             </div>
             <div>
