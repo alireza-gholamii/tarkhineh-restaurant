@@ -63,7 +63,7 @@ const Slider = () => {
             <div>
                 <span className='sm:mt-[6vh] mt-[9vh] text-white flex justify-center text-base sm:text-4xl fontEstedad [0_24px]'>{picture[currentIndex].text}</span>
                 <div className='flex justify-center md:mt-[10vh] mt-[1vh]'>
-                    <button className=' bg-[#417F56] md:rounded-[8px] rounded-[4px] text-white fontEstedad font-normal h-[34px] w-[140px] md:w-[11.5rem] md:h-[40px]'>سفارش انلاین غذا</button>
+                    <button className=' bg-[#417F56] w-[94px] md:rounded-[8px] rounded-[4px] sm:text-auto text-[10px] sm:text-base text-white fontEstedad font-normal h-[34px] w-[140px] md:w-[11.5rem] md:h-[40px]'>سفارش انلاین غذا</button>
                 </div>
             </div>
             </div>

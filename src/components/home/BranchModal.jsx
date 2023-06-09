@@ -7,19 +7,24 @@ import gallery from "../../img/branch-img/hover-gallery.png"
 import arrow from "../../img/branch-img/arrow-left.svg"
 import expend from "../../img/icons/expand 1.svg"
 
-const TarkhinehGardi = () => {
+const BranchModal = () => {
+    
     return (
-        <div className='flex flex-col mt-12 mb-12'>
-            <div className='flex justify-center m-[15px_auto]'>
-                <span className='fontEstedad font-bold leading-9 text-2xl'>ترخینه گردی</span>
+        <div >
+            <div>
+                <h6>انتخاب شعبه</h6>
+                <img src='' alt='close' />
             </div>
-            <div className='flex sm:flex-row gap-4 sm:gap-0 flex-col m-[0_4vw] lg:h-[400px]'>
-                <Branch gallery={gallery} img={image1} name={"شعبه ونک"} address={"میدان ونک، خیابان فردوسی، نبش کوچه نیلوفر، پلاک ۲۶"}/>
-                <Branch gallery={gallery} img={image1} name={"شعبه اقدسیه"} address={"خیابان اقدسیه ، نرسیده به میدان خیام، پلاک ۸"}/>
-                <Branch gallery={gallery} img={image2} name={"شعبه چالوس"} address={"چالوس، خیابان ۱۷ شهریور، بعد کوچه کوروش، جنب داروخانه دکتر میلانی"}/>
-                <Branch gallery={gallery} img={image2} name={"شعبه اکباتان"} address={"شهرک اکباتان، فاز ۳، مجتمع تجاری کوروش، طبقه سوم"}/>    
+            <div>
+                <span></span>
+                <div className='flex sm:flex-row gap-4 sm:gap-0 flex-col m-[0_4vw] lg:h-[400px]'>
+                    <Branch gallery={gallery} img={image1} name={"شعبه ونک"} address={"میدان ونک، خیابان فردوسی، نبش کوچه نیلوفر، پلاک ۲۶"}/>
+                    <Branch gallery={gallery} img={image1} name={"شعبه اقدسیه"} address={"خیابان اقدسیه ، نرسیده به میدان خیام، پلاک ۸"}/>
+                    <Branch gallery={gallery} img={image2} name={"شعبه چالوس"} address={"چالوس، خیابان ۱۷ شهریور، بعد کوچه کوروش، جنب داروخانه دکتر میلانی"}/>
+                    <Branch gallery={gallery} img={image2} name={"شعبه اکباتان"} address={"شهرک اکباتان، فاز ۳، مجتمع تجاری کوروش، طبقه سوم"}/>    
+                </div>
             </div>
-            </div>
+        </div>
     );
 };
 
@@ -38,4 +43,4 @@ const Branch = ({img , name , address, gallery}) => {
     )
 }
 
-export default TarkhinehGardi;
+export default BranchModal;

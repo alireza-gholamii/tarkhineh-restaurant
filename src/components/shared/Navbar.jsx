@@ -52,7 +52,7 @@ const Navbar = () => {
                     <img className='m-1 w-5 md:w-auto' src={shop}/>
                     <img className='m-1 w-5 md:w-auto' src={user}/>
                 </div>
-            </div> 
+            </div>
         </>
     );
 };
