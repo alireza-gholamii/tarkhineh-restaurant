@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 //picure
 import logo from "../../img/icons/logo.svg"
@@ -7,8 +7,12 @@ import arrowDown from "../../img/icons/arrow-down.svg"
 import search from "../../img/icons/search.svg"
 import shop from "../../img/icons/shop.svg"
 import user from "../../img/icons/user.svg"
+import BranchModal from '../home/BranchModal';
 
 const Navbar = () => {
+
+    const [showModal , setShowModal] = useState(false)
+
     return (
         <>
            <div className='flex justify-between p-6 fontEstedad'>
@@ -21,13 +25,14 @@ const Navbar = () => {
                     <ul className='hidden md:flex'>
                         <li className='m-2'><a href='#'>صفحه اصلی</a></li>
                         <li className='m-2'>
-                            <div className='flex'>
+                            <a
+                                href='#'
+                                onClick={() => setShowModal(true)} 
+                                className='flex'>
                                 <span>شعبه</span>
                                 <img src={arrowDown}/>
-                                <div>
-                                    
-                                </div>
-                            </div>
+                               
+                            </a>
                         </li>
                         <li className='m-2'>
                             <div className='flex'>
@@ -53,6 +58,8 @@ const Navbar = () => {
                     <img className='m-1 w-5 md:w-auto' src={user}/>
                 </div>
             </div>
+            <BranchModal isVisible={showModal} onClose={() => setShowModal(false)} />
+            
         </>
     );
 };
