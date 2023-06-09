@@ -15,7 +15,7 @@ const Navbar = () => {
 
     return (
         <>
-           <div className='flex justify-between p-6 fontEstedad'>
+           <div className='flex justify-between p-6 fontEstedad h-[90px]'>
                 
                 <div className="order-first md:order-2 flex">
                     
@@ -23,25 +23,38 @@ const Navbar = () => {
                         className='md:hidden block w-6'/>
                     
                     <ul className='hidden md:flex'>
-                        <li className='m-2'><a href='#'>صفحه اصلی</a></li>
-                        <li className='m-2'>
+                        <li className='flex flex-col m-2'>
+                            <a
+                                className='text-[#417f56] font-bold leading-7 '
+                                href='#'>صفحه اصلی</a>
+                            <div className='w-[100%] h-[2px] bg-[#417f56]'></div>
+                        </li>
+                        <li className='group relative flex flex-col m-2'>
                             <a
                                 href='#'
                                 onClick={() => setShowModal(true)} 
                                 className='flex'>
                                 <span>شعبه</span>
                                 <img src={arrowDown}/>
-                               
                             </a>
+                            <div className='absolute top-8 left-3 duration-500 hidden group-hover:flex flex-col w-36 bg-white divide-y divide-solid fontEstedad z-50'>
+                                <span className='h-10 flex items-center p-2 cursor-pointer'>اکباتان</span>
+                                <span className='h-10 flex items-center p-2 cursor-pointer'>چالوس</span>
+                                <span className='h-10 flex items-center p-2 cursor-pointer'>اقدسیه</span>
+                                <span className='h-10 flex items-center p-2 cursor-pointer'>ونک</span>
+                            </div>
                         </li>
-                        <li className='m-2'>
-                            <div className='flex'>
+                        <li className='group cursor-pointer relative m-2'>
+                            <a className='flex'>
                                 <span>منو</span>
                                 <img src={arrowDown}/>
-                                <div>
-
-                                </div>
-                            </div>
+                            </a>
+                            <div className='absolute top-8 duration-500 hidden group-hover:flex flex-col w-36 bg-white divide-y divide-solid fontEstedad z-50'>
+                                <span className='h-10 flex items-center p-2 cursor-pointer'>غذای اصلی</span>
+                                <span className='h-10 flex items-center p-2 cursor-pointer'>پیش غذا</span>
+                                <span className='h-10 flex items-center p-2 cursor-pointer'>دسر</span>
+                                <span className='h-10 flex items-center p-2 cursor-pointer'>نوشیدنی</span>
+                            </div>       
                         </li>
                         <li className='m-2'>
                             <a href='#'>اعطای نمایندگی</a>
@@ -53,9 +66,9 @@ const Navbar = () => {
                     <img src={logo} alt='logo'/>
                 </div>
                 <div className='order-3 flex'>
-                    <img className='m-1 hidden md:block' src={search}/>
-                    <img className='m-1 w-5 md:w-auto' src={shop}/>
-                    <img className='m-1 w-5 md:w-auto' src={user}/>
+                    <img className='cursor-pointer m-1 hidden md:block' src={search}/>
+                    <img className='cursor-pointer m-1 w-5 md:w-auto' src={shop}/>
+                    <img className='cursor-pointer m-1 w-5 md:w-auto' src={user}/>
                 </div>
             </div>
             <BranchModal isVisible={showModal} onClose={() => setShowModal(false)} />
