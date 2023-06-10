@@ -8,14 +8,15 @@ import search from "../../img/icons/search.svg"
 import shop from "../../img/icons/shop.svg"
 import user from "../../img/icons/user.svg"
 import BranchModal from '../home/BranchModal';
+import Search from '../home/SearchModal';
 
 const Navbar = () => {
 
-    const [showModal , setShowModal] = useState(false)
-
+    const [showBranchModal , setShowBranchModal] = useState(false);
+    const [showSearchModal , setShowSearchModal] = useState(false);
     return (
         <>
-           <div className='flex justify-between p-6 fontEstedad h-[90px]'>
+           <div className='flex justify-between p-6 m-[0_auto] fontEstedad h-[90px]'>
                 
                 <div className="order-first md:order-2 flex">
                     
@@ -32,12 +33,12 @@ const Navbar = () => {
                         <li className='group relative flex flex-col m-2'>
                             <a
                                 href='#'
-                                onClick={() => setShowModal(true)} 
+                                onClick={() => setShowBranchModal(true)} 
                                 className='flex'>
                                 <span>شعبه</span>
                                 <img src={arrowDown}/>
                             </a>
-                            <div className='absolute top-8 left-3 duration-500 hidden group-hover:flex flex-col w-36 bg-white divide-y divide-solid fontEstedad z-50'>
+                            <div className='absolute top-12 left-3 duration-500 hidden group-hover:flex flex-col w-36 bg-white divide-y divide-solid fontEstedad z-50'>
                                 <span className='h-10 flex items-center p-2 cursor-pointer'>اکباتان</span>
                                 <span className='h-10 flex items-center p-2 cursor-pointer'>چالوس</span>
                                 <span className='h-10 flex items-center p-2 cursor-pointer'>اقدسیه</span>
@@ -45,11 +46,12 @@ const Navbar = () => {
                             </div>
                         </li>
                         <li className='group cursor-pointer relative m-2'>
-                            <a className='flex'>
+                            <a className='flex'
+                            >
                                 <span>منو</span>
                                 <img src={arrowDown}/>
                             </a>
-                            <div className='absolute top-8 duration-500 hidden group-hover:flex flex-col w-36 bg-white divide-y divide-solid fontEstedad z-50'>
+                            <div className='absolute top-12 duration-500 hidden group-hover:flex flex-col w-36 bg-white divide-y divide-solid fontEstedad z-50'>
                                 <span className='h-10 flex items-center p-2 cursor-pointer'>غذای اصلی</span>
                                 <span className='h-10 flex items-center p-2 cursor-pointer'>پیش غذا</span>
                                 <span className='h-10 flex items-center p-2 cursor-pointer'>دسر</span>
@@ -66,13 +68,15 @@ const Navbar = () => {
                     <img src={logo} alt='logo'/>
                 </div>
                 <div className='order-3 flex'>
-                    <img className='cursor-pointer m-1 hidden md:block' src={search}/>
+                    <img
+                        onClick={() => setShowSearchModal(true)}     
+                        className='cursor-pointer m-1 hidden md:block' src={search}/>
                     <img className='cursor-pointer m-1 w-5 md:w-auto' src={shop}/>
                     <img className='cursor-pointer m-1 w-5 md:w-auto' src={user}/>
                 </div>
             </div>
-            <BranchModal isVisible={showModal} onClose={() => setShowModal(false)} />
-            
+            <BranchModal isVisible={showBranchModal} onClose={() => setShowBranchModal(false)} />
+            <Search isVisible={showSearchModal} onClose={() => setShowSearchModal(false)}/>
         </>
     );
 };
