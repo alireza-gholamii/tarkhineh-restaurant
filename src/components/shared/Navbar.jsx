@@ -7,12 +7,10 @@ import arrowDown from "../../img/icons/arrow-down.svg"
 import search from "../../img/icons/search.svg"
 import shop from "../../img/icons/shop.svg"
 import user from "../../img/icons/user.svg"
-import BranchModal from '../home/BranchModal';
 import Search from '../home/SearchModal';
 
 const Navbar = () => {
 
-    const [showBranchModal , setShowBranchModal] = useState(false);
     const [showSearchModal , setShowSearchModal] = useState(false);
     return (
         <>
@@ -33,12 +31,11 @@ const Navbar = () => {
                         <li className='group relative flex flex-col m-2'>
                             <a
                                 href='#'
-                                onClick={() => setShowBranchModal(true)} 
                                 className='flex'>
                                 <span>شعبه</span>
                                 <img src={arrowDown}/>
                             </a>
-                            <div className='absolute top-12 left-3 duration-500 hidden group-hover:flex flex-col w-36 bg-white divide-y divide-solid fontEstedad z-50'>
+                            <div className='absolute top-6 left-[5px] duration-500 hidden group-hover:flex flex-col w-36 bg-white divide-y divide-solid fontEstedad z-50'>
                                 <span className='h-10 flex items-center p-2 cursor-pointer'>اکباتان</span>
                                 <span className='h-10 flex items-center p-2 cursor-pointer'>چالوس</span>
                                 <span className='h-10 flex items-center p-2 cursor-pointer'>اقدسیه</span>
@@ -51,7 +48,7 @@ const Navbar = () => {
                                 <span>منو</span>
                                 <img src={arrowDown}/>
                             </a>
-                            <div className='absolute top-12 duration-500 hidden group-hover:flex flex-col w-36 bg-white divide-y divide-solid fontEstedad z-50'>
+                            <div className='absolute z-1 top-6 duration-500 hidden group-hover:flex flex-col w-36 bg-white divide-y divide-solid fontEstedad z-50'>
                                 <span className='h-10 flex items-center p-2 cursor-pointer'>غذای اصلی</span>
                                 <span className='h-10 flex items-center p-2 cursor-pointer'>پیش غذا</span>
                                 <span className='h-10 flex items-center p-2 cursor-pointer'>دسر</span>
@@ -75,7 +72,6 @@ const Navbar = () => {
                     <img className='cursor-pointer m-1 w-5 md:w-auto' src={user}/>
                 </div>
             </div>
-            <BranchModal isVisible={showBranchModal} onClose={() => setShowBranchModal(false)} />
             <Search isVisible={showSearchModal} onClose={() => setShowSearchModal(false)}/>
         </>
     );

@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 //import
 import close from "../../img/icons/Closeicon.svg"
 import search from "../../img/icons/search-normal.svg"
+import { createContext } from 'react';
+
+//context
+const searchContext = createContext()
 
 const SearchModal = ({isVisible , onClose}) => {
 
@@ -10,6 +14,18 @@ const SearchModal = ({isVisible , onClose}) => {
 
     const closeHandeler = (e) => {
         if(e.target.id === "wrapper") onClose()
+    }
+
+    const [inputValue , setInputValue] = useState("")
+   
+    const sendValue = () => {
+        
+    }
+
+    const enterHandler = (e) => {
+        if(e.key === 'Enter') {
+            if(e.target.value !== "") sendValue()
+        }
     }
 
     return (
@@ -32,13 +48,17 @@ const SearchModal = ({isVisible , onClose}) => {
             <div className='flex flex-col p-4 items-center'>
                 <span>لطفا متن خود را تایپ و سپس دکمه Enter را بزنید.</span>
                 <div
-                    className='flex mt-6 justify-between w-[409px] h-[40px] border-[1px] border-[#CBCBCB] rounded p-[8px_16px]' 
+                    className='flex mt-6 justify-between border rounded border-[#CBCBCB] p-[8px_16px]'    
                     >
                     <input
-                        className=''
+                        className='w-[409px] h-[35px] outline-none ' 
                         placeholder='جستجو' 
-                        type='text' />
-                    <img 
+                        type='text' 
+                        value={inputValue}
+                        onChange={(e) => setInputValue(e.target.value)}
+                        onKeyDown={enterHandler}
+                        />
+                    <img
                         src={search}
                         />
                 </div>

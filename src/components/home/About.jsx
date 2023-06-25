@@ -17,10 +17,10 @@ const About = () => {
                 <h4 className='sm:text-2xl sm:font-bold mb-6 mr-[6vw]'>رستوران‌های زنجیره‌ای ترخینه</h4>
                 <p className='sm:w-[70%] sm:leading-9 leading-4 w-[88%] mr-[5vw] sm:text-xl text-[10px] text-justify'>
                 مهمان‌نوازی یکی از مهم‌ترین مشخصه‌های ایرانیان است و باعث افتخار ماست که بیش از 20 سال است خدمت‌گزار مردم شریف ایران هستیم. ما در رستوران‌های زنجیره‌ای ترخینه همواره تلاش کردیم که در محیطی اصیل بر پایه معماری و طراحی مدرن در کنار طبیعتی دلنواز، غذایی سالم و درخور شان شما عزیزان ارائه دهیم.
-                <div className='flex justify-end mt-2 '>
+                </p>
+                <div className='flex justify-end sm:w-[78%] w-[88%] mt-2'>
                      <a className='border-solid border-[1px] w-[154px] sm:w-[184] h-[32px] sm:h-[40px] flex row gap-2 justify-center items-center border-white rounded ' href='#'>اطلاعات بیشتر<img className='sm:w-[24px] w-[16px]' src={arrowLeft}/></a>
                 </div>
-                </p>
             </div>
             <div>
                 <div className='flex sm:items-center mt-[3vh] gap-5 flex-col sm:gap-2 sm:m-14'>
