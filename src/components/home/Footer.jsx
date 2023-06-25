@@ -12,7 +12,6 @@ const Footer = () => {
             style={{background : `url(${footer})`}}
             className='flex justify-around h-[319px]'
             >
-                
             <div
                 className='flex flex-col justify-center gap-[16px] fontEstedad text-white ' 
                 >
