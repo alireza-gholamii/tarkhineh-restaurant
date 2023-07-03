@@ -2,10 +2,10 @@ import React from 'react';
 import Food from './Food';
 
 //image
-import maincourse from "../../img/menu-img/maincourse.png";
-import starter from "../../img/menu-img/starter.png"
-import dessert from "../../img/menu-img/dessert.png"
-import drink from "../../img/menu-img/drink.png"
+import maincourse from "/public/assets/img/menu-img/maincourse.png";
+import starter from "/public/assets/img/menu-img/starter.png"
+import dessert from "/public/assets/img/menu-img/dessert.png"
+import drink from "/public/assets/img/menu-img/drink.png"
 
 const Foods = () => {
     return (

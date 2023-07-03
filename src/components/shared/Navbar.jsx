@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
 //picure
-import logo from "../../img/icons/logo.svg"
-import hamburgerMenu from "../../img/icons/menu.svg"
-import arrowDown from "../../img/icons/arrow-down.svg"
-import search from "../../img/icons/search.svg"
-import shop from "../../img/icons/shop.svg"
-import user from "../../img/icons/user.svg"
+import logo from "/public/assets/img/icons/logo.svg"
+import hamburgerMenu from "/public/assets/img/icons/menu.svg"
+import arrowDown from "/public/assets/img/icons/arrow-down.svg"
+import search from "/public/assets/img/icons/search.svg"
+import shop from "/public/assets/img/icons/shop.svg"
+import user from "/public/assets/img/icons/user.svg"
 import Search from '../home/SearchModal';
 
 const Navbar = () => {

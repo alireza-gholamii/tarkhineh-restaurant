@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from "react-router-dom"
 
 //image
-import image1 from "../../img/branch-img/image.svg";
-import image2 from "../../img/branch-img/image2.svg"
-import gallery from "../../img/branch-img/hover-gallery.png"
-import expend from "../../img/icons/expand 1.svg"
-import closeIcon from "../../img/icons/closeIcon.svg"
+import image1 from "/public/assets/img/branch-img/image.svg";
+import image2 from "/public/assets/img/branch-img/image2.svg"
+import gallery from "/public/assets/img/branch-img/hover-gallery.png"
+import expend from "/public/assets/img/icons/expand 1.svg"
+import closeIcon from "/public/assets/img/icons/closeIcon.svg"
 
 const BranchModal = ({ isVisible , onClose }) => {
     
@@ -46,7 +47,7 @@ const BranchModal = ({ isVisible , onClose }) => {
 
 const Branch = ({img , name , address, gallery}) => {
     return (
-        <div className='relative group flex sm:grid sm:m-[15px_auto] bg-white fontEstedad sm:w-[13vw] w-[80vw] sm:h-[260x] rounded border-solid border-[#CBCBCB] hover:border-[#417F56] border-[1px]'>
+        <Link to="/branch" className='relative group flex sm:grid sm:m-[15px_auto] bg-white fontEstedad sm:w-[13vw] w-[80vw] sm:h-[260x] rounded border-solid border-[#CBCBCB] hover:border-[#417F56] border-[1px]'>
             <img className="sm:h-auto w-[35vw] h-[10vh] sm:w-auto" alt='picture' src={img}/>
             <img className='hidden sm:group-hover:block absolute top-[22%] right-[43%]' src={gallery} alt="picture"/>
             <img className='flex sm:hidden absolute top-[80%] right-[2%]' src={expend} alt="expand" />
@@ -54,7 +55,7 @@ const Branch = ({img , name , address, gallery}) => {
                 <h5 className='flex items-center justify-center sm:font-bold text-xs '>{name}</h5>
                 <span className='flex mb-2 sm:text-sm text-center items-center text-[10px] justify-center'>{address}</span>    
             </div>
-            </div>
+        </Link>
     )
 }
 

@@ -1,12 +1,12 @@
 import React from 'react';
 
 //images
-import about from "../../img/about.svg"
-import arrowLeft from "../../img/icons/arrow-left.svg"
-import diagram from "../../img/icons/diagram.svg"
-import homeWifi from "../../img/icons/home-wifi.svg"
-import menuBoard from "../../img/icons/menu-board.svg"
-import userSvg from "../../img/icons/userSvg.svg"
+import about from "/assets/img/about.svg"
+import arrowLeft from "/assets/img/icons/arrow-left.svg"
+import diagram from "/assets/img/icons/diagram.svg"
+import homeWifi from "/assets/img/icons/home-wifi.svg"
+import menuBoard from "/assets/img/icons/menu-board.svg"
+import userSvg from "/public/assets/img/icons/userSvg.svg"
 
 const About = () => {
     return (

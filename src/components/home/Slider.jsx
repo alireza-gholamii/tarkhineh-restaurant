@@ -3,19 +3,19 @@ import React , {useEffect, useState} from 'react';
 import BranchModal from '../home/BranchModal';
 
 //images
-import slide1 from "../../img/slider/Slider1.svg"
-import slide2 from "../../img/slider/Slider2.svg"
-import slide3 from "../../img/slider/Slider3.svg"
-import slide4 from "../../img/slider/Slider4.svg"
-import slide5 from "../../img/slider/Slider5.svg"
-import slide6 from "../../img/slider/Slider6.svg"
+import slide1 from "/public/assets/img/slider/Slider1.svg"
+import slide2 from "/public/assets/img/slider/Slider2.svg"
+import slide3 from "/public/assets/img/slider/Slider3.svg"
+import slide4 from "/public/assets/img/slider/Slider4.svg"
+import slide5 from "/public/assets/img/slider/Slider5.svg"
+import slide6 from "/public/assets/img/slider/Slider6.svg"
 
 //icons
-import rightArrow from "../../img/icons/Right Arrow.svg"
-import leftArrow from "../../img/icons/left Arrow.svg"
-import Rectangle from "../../img/icons/Rectangle2.svg"
-import selectedSlidebutton from "../../img/icons/Ellipse.svg"
-import slidebutton from "../../img/icons/Ellipse2.svg"
+import rightArrow from "/public/assets/img/icons/Right Arrow.svg"
+import leftArrow from "/public/assets/img/icons/left Arrow.svg"
+import Rectangle from "/public/assets/img/icons/Rectangle2.svg"
+import selectedSlidebutton from "/public/assets/img/icons/Ellipse.svg"
+import slidebutton from "/public/assets/img/icons/Ellipse2.svg"
 
 
 const Slider = () => {
@@ -61,12 +61,12 @@ const Slider = () => {
     return (
 
         <div className='group relative grid'>
-            <div className={`w-[100%] h-[20vh] md:h-[40vh] bg-no-repeat bg-cover bg-center duration-500`}
+            <div className={`w-[100%] h-44 md:h-[336px] bg-no-repeat bg-cover bg-center duration-500`}
                 style={{backgroundImage : `url(${picture[currentIndex].url})`}}
             >
             <div>
-                <span className='sm:mt-[6vh] mt-[9vh] text-white flex justify-center text-base sm:text-4xl fontEstedad [0_24px]'>{picture[currentIndex].text}</span>
-                <div className='flex justify-center md:mt-[10vh] mt-[1vh]'>
+                <span className='sm:mt-[124px] mt-[70px] text-white flex justify-center text-base sm:text-4xl fontEstedad [0_24px]'>{picture[currentIndex].text}</span>
+                <div className='flex justify-center md:mt-10 mt-2'>
                     <button
                         onClick={() => setShowBranchModal(true)} 
                         className=' bg-[#417F56] w-[94px] md:rounded-[8px] rounded-[4px] sm:text-auto text-[10px] sm:text-base text-white fontEstedad font-normal h-[34px] md:w-[11.5rem] md:h-[40px]'>سفارش انلاین غذا</button>
@@ -74,7 +74,7 @@ const Slider = () => {
             </div>
             </div>
             <div
-                className='absolute justify-self-center content-end md:top-[91%] sm:w-[154px] sm:h-[33px] w-[89px] h-[19px] bg-no-repeat bg-cover top-[18.2vh]'
+                className='absolute justify-self-center content-end top-[160px] md:top-[91%] sm:w-[154px] sm:h-[33px] w-[89px] h-[19px] bg-no-repeat bg-cover'
                 style={{
                     backgroundImage : `url(${Rectangle})`
                 }}

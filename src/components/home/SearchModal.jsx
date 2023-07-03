@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 //import
-import close from "../../img/icons/Closeicon.svg"
-import search from "../../img/icons/search-normal.svg"
+import close from "/public/assets/img/icons/Closeicon.svg"
+import search from "/public/assets/img/icons/search-normal.svg"
 import { createContext } from 'react';
 
 //context

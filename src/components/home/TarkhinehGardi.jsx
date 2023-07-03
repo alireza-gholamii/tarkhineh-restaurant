@@ -1,11 +1,11 @@
 import React from 'react';
 
 //image
-import image1 from "../../img/branch-img/image.svg";
-import image2 from "../../img/branch-img/image2.svg"
-import gallery from "../../img/branch-img/hover-gallery.png"
-import arrow from "../../img/branch-img/arrow-left.svg"
-import expend from "../../img/icons/expand 1.svg"
+import image1 from "/public/assets/img/branch-img/image.svg";
+import image2 from "/public/assets/img/branch-img/image2.svg"
+import gallery from "/public/assets/img/branch-img/hover-gallery.png"
+import arrow from "/public/assets/img/branch-img/arrow-left.svg"
+import expend from "/public/assets/img/icons/expand 1.svg"
 
 const TarkhinehGardi = () => {
     return (

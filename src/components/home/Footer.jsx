@@ -1,10 +1,10 @@
 import React from 'react';
 
 //image 
-import footer from "../../img/footer.svg"
-import telegram from "../../img/icons/telegram.svg"
-import instagram from "../../img/icons/instagram.svg"
-import twitter from "../../img/icons/twitter.svg"
+import footer from "/public/assets/img/footer.svg"
+import telegram from "/public/assets/img/icons/telegram.svg"
+import instagram from "/public/assets/img/icons/instagram.svg"
+import twitter from "/public/assets/img/icons/twitter.svg"
 
 const Footer = () => {
     return (
