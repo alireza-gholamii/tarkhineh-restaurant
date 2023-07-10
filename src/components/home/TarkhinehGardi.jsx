@@ -11,7 +11,7 @@ const TarkhinehGardi = () => {
     return (
         <div className='flex flex-col mt-12 mb-12'>
             <div className='flex justify-center m-[15px_auto]'>
-                <span className='fontEstedad font-bold leading-9 text-2xl'>ترخینه گردی</span>
+                <span className='font-bold leading-9 text-2xl'>ترخینه گردی</span>
             </div>
             <div className='flex sm:flex-row gap-4 sm:gap-0 flex-col m-[0_4vw] lg:h-[400px]'>
                 <Branch gallery={gallery} img={image1} name={"شعبه ونک"} address={"میدان ونک، خیابان فردوسی، نبش کوچه نیلوفر، پلاک ۲۶"}/>
@@ -25,7 +25,7 @@ const TarkhinehGardi = () => {
 
 const Branch = ({img , name , address, gallery}) => {
     return (
-        <div className={`relative group flex sm:grid sm:m-[15px_auto] bg-white fontEstedad sm:w-[20vw] sm:h-[360px] rounded border-solid border-[#417F56] border-[1px]`}>
+        <div className={`relative group flex sm:grid sm:m-[15px_auto] bg-white sm:w-[20vw] sm:h-[360px] rounded border-solid border-[#417F56] border-[1px]`}>
             <img className="w-36 sm:w-full h-fitt" alt='picture' src={img}/>
             <img className='hidden sm:group-hover:block absolute top-[25%] right-[45%]' src={gallery} alt="picture"/>
             <img className='flex sm:hidden absolute top-[80%] right-[2%]' src={expend} alt="expand" />

@@ -3,12 +3,12 @@ import React , {useEffect, useState} from 'react';
 import BranchModal from '../home/BranchModal';
 
 //images
-import slide1 from "/public/assets/img/slider/Slider1.svg"
-import slide2 from "/public/assets/img/slider/Slider2.svg"
-import slide3 from "/public/assets/img/slider/Slider3.svg"
-import slide4 from "/public/assets/img/slider/Slider4.svg"
-import slide5 from "/public/assets/img/slider/Slider5.svg"
-import slide6 from "/public/assets/img/slider/Slider6.svg"
+import slide1 from "/assets/img/slider/Slider1.svg"
+import slide2 from "/assets/img/slider/Slider2.svg"
+import slide3 from "/assets/img/slider/Slider3.svg"
+import slide4 from "/assets/img/slider/Slider4.svg"
+import slide5 from "/assets/img/slider/Slider5.svg"
+import slide6 from "/assets/img/slider/Slider6.svg"
 
 //icons
 import rightArrow from "/public/assets/img/icons/Right Arrow.svg"
@@ -65,11 +65,11 @@ const Slider = () => {
                 style={{backgroundImage : `url(${picture[currentIndex].url})`}}
             >
             <div>
-                <span className='sm:mt-[124px] mt-[70px] text-white flex justify-center text-base sm:text-4xl fontEstedad [0_24px]'>{picture[currentIndex].text}</span>
+                <span className='sm:mt-[124px] mt-[70px] text-white flex justify-center text-base sm:text-4xl [0_24px]'>{picture[currentIndex].text}</span>
                 <div className='flex justify-center md:mt-10 mt-2'>
                     <button
                         onClick={() => setShowBranchModal(true)} 
-                        className=' bg-[#417F56] w-[94px] md:rounded-[8px] rounded-[4px] sm:text-auto text-[10px] sm:text-base text-white fontEstedad font-normal h-[34px] md:w-[11.5rem] md:h-[40px]'>سفارش انلاین غذا</button>
+                        className=' bg-[#417F56] w-[94px] md:rounded-[8px] rounded-[4px] sm:text-auto text-[10px] sm:text-base text-white font-normal h-[34px] md:w-[11.5rem] md:h-[40px]'>سفارش انلاین غذا</button>
                 </div>
             </div>
             </div>

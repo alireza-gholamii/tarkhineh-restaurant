@@ -14,7 +14,7 @@ const Navbar = () => {
     const [showSearchModal , setShowSearchModal] = useState(false);
     return (
         <>
-           <div className='flex justify-between p-6 m-[0_auto] fontEstedad h-[90px]'>
+           <div className='flex justify-between p-6 m-[0_3vw] h-[90px]'>
                 
                 <div className="order-first md:order-2 flex">
                     
@@ -35,7 +35,7 @@ const Navbar = () => {
                                 <span>شعبه</span>
                                 <img src={arrowDown}/>
                             </a>
-                            <div className='absolute top-6 left-[5px] duration-500 hidden group-hover:flex flex-col w-36 bg-white divide-y divide-solid fontEstedad z-50'>
+                            <div className='absolute top-6 left-[5px] duration-500 hidden group-hover:flex flex-col w-36 bg-white divide-y divide-solid z-50'>
                                 <span className='h-10 flex items-center p-2 cursor-pointer'>اکباتان</span>
                                 <span className='h-10 flex items-center p-2 cursor-pointer'>چالوس</span>
                                 <span className='h-10 flex items-center p-2 cursor-pointer'>اقدسیه</span>
@@ -48,7 +48,7 @@ const Navbar = () => {
                                 <span>منو</span>
                                 <img src={arrowDown}/>
                             </a>
-                            <div className='absolute z-1 top-6 duration-500 hidden group-hover:flex flex-col w-36 bg-white divide-y divide-solid fontEstedad z-50'>
+                            <div className='absolute z-1 top-6 duration-500 hidden group-hover:flex flex-col w-36 bg-white divide-y divide-solid z-50'>
                                 <span className='h-10 flex items-center p-2 cursor-pointer'>غذای اصلی</span>
                                 <span className='h-10 flex items-center p-2 cursor-pointer'>پیش غذا</span>
                                 <span className='h-10 flex items-center p-2 cursor-pointer'>دسر</span>

@@ -18,7 +18,9 @@ const App = () => {
           <Route path='/' element={<Layout />}>
             <Route index element={<Homepage />}/>
           </Route>
-            <Route path='/branch' element={<Branch />}/>
+            <Route path='/branch' element={<Layout />}>
+              <Route index element={<Branch />}/>
+            </Route>
         </Routes>
       </FoodContextProvider>
     </div>

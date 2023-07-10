@@ -20,7 +20,7 @@ const BranchModal = ({ isVisible , onClose }) => {
         <div
             id='wrapper'
             onClick={closeHandler} 
-            className='fixed duration-500 inset-0 fontEstedad bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center z-30'>
+            className='fixed duration-500 inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center z-30'>
            <div className='flex flex-col sm:w-[60vw] w-[88vw] h-[65vh] bg-white rounded'>
                 <div className='flex justify-between sm:mt-6 sm:bg-white bg-[#EDEDED] p-[20px_17px]'>
                     <div className='sm:p-4'></div>
@@ -47,7 +47,7 @@ const BranchModal = ({ isVisible , onClose }) => {
 
 const Branch = ({img , name , address, gallery}) => {
     return (
-        <Link to="/branch" className='relative group flex sm:grid sm:m-[15px_auto] bg-white fontEstedad sm:w-[13vw] w-[80vw] sm:h-[260x] rounded border-solid border-[#CBCBCB] hover:border-[#417F56] border-[1px]'>
+        <Link to="/branch" className='relative group flex sm:grid sm:m-[15px_auto] bg-white sm:w-[13vw] w-[80vw] sm:h-[260x] rounded border-solid border-[#CBCBCB] hover:border-[#417F56] border-[1px]'>
             <img className="sm:h-auto w-[35vw] h-[10vh] sm:w-auto" alt='picture' src={img}/>
             <img className='hidden sm:group-hover:block absolute top-[22%] right-[43%]' src={gallery} alt="picture"/>
             <img className='flex sm:hidden absolute top-[80%] right-[2%]' src={expend} alt="expand" />

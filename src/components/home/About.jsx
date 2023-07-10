@@ -11,7 +11,7 @@ import userSvg from "/public/assets/img/icons/userSvg.svg"
 const About = () => {
     return (
         <div
-            className='flex sm:flex-row flex-col text-white h-[360px] sm:h-[390px] fontEstedad' 
+            className='flex sm:flex-row flex-col text-white h-[360px] sm:h-[390px]' 
             style={{background : `url(${about})`}}>
             <div className='relative mt-12 flex flex-col '>
                 <h4 className='sm:text-2xl sm:font-bold mb-6 mr-[6vw]'>رستوران‌های زنجیره‌ای ترخینه</h4>

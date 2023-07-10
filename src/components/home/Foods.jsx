@@ -2,10 +2,10 @@ import React from 'react';
 import Food from './Food';
 
 //image
-import maincourse from "/public/assets/img/menu-img/maincourse.png";
-import starter from "/public/assets/img/menu-img/starter.png"
-import dessert from "/public/assets/img/menu-img/dessert.png"
-import drink from "/public/assets/img/menu-img/drink.png"
+import maincourse from "/assets/img/menu-img/maincourse.png";
+import starter from "/assets/img/menu-img/starter.png"
+import dessert from "/assets/img/menu-img/dessert.png"
+import drink from "/assets/img/menu-img/drink.png"
 
 const Foods = () => {
     return (
@@ -16,7 +16,7 @@ const Foods = () => {
                     type='text' 
                     placeholder='جستجو'/>
             </div>
-                <h1 className='flex mt-4 justify-center fontEstedad text-2xl font-bold'>منوی رستوران</h1>
+                <h1 className='flex mt-4 justify-center text-2xl font-bold'>منوی رستوران</h1>
             <div className='flex justify-center'>
                 <div className='grid w-[90%] grid-cols-2 md:grid-cols-4 gap-y-15 mt-[5%]'>
                     <Food img={drink} />

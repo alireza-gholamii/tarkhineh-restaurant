@@ -2,9 +2,9 @@ import React from 'react';
 
 //image 
 import footer from "/public/assets/img/footer.svg"
-import telegram from "/public/assets/img/icons/telegram.svg"
-import instagram from "/public/assets/img/icons/instagram.svg"
-import twitter from "/public/assets/img/icons/twitter.svg"
+import telegram from "/assets/img/icons/telegram.svg"
+import instagram from "/assets/img/icons/instagram.svg"
+import twitter from "/assets/img/icons/twitter.svg"
 
 const Footer = () => {
     return (
@@ -14,7 +14,7 @@ const Footer = () => {
             >
                 
             <div
-                className='flex flex-col justify-center gap-[16px] fontEstedad text-white ' 
+                className='flex flex-col justify-center gap-[16px] text-white ' 
                 >
                 <h5 className='sm:text-xl text-xs sm:font-bold'>دسترسی آسان</h5>
                 <ul className='flex flex-col gap-[16px]'>
@@ -28,7 +28,7 @@ const Footer = () => {
                     </li>
                 </ul>
             </div>
-            <div className='flex flex-col justify-center gap-[16px] items-start fontEstedad text-white'>
+            <div className='flex flex-col justify-center gap-[16px] items-start text-white'>
                 <h5 className='sm:text-xl text-xs sm:font-bold'>شعبه های ترخینه</h5>
                 <ul className='flex flex-col gap-[16px]'>
                     <li><a href="#"> شعبه اکباتان</a></li>
@@ -37,7 +37,7 @@ const Footer = () => {
                     <li><a href="#"> شعبه ونک</a></li>
                 </ul>
             </div>
-            <div className='relative flex gap-[16px] flex-col justify-center fontEstedad text-white'>
+            <div className='relative flex gap-[16px] flex-col justify-center text-white'>
                 <h5 className='hidden sm:flex text-xl font-bold'>پیام به ترخینه</h5>
                 <div className='hidden sm:flex'>
                     <div className='flex flex-col ml-[26px]'>

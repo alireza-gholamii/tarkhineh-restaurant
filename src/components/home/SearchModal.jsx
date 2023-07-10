@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 //import
-import close from "/public/assets/img/icons/Closeicon.svg"
-import search from "/public/assets/img/icons/search-normal.svg"
+import close from "/assets/img/icons/Closeicon.svg"
+import search from "/assets/img/icons/search-normal.svg"
 import { createContext } from 'react';
 
 //context
@@ -32,7 +32,7 @@ const SearchModal = ({isVisible , onClose}) => {
         <div
         id='wrapper'
         onClick={closeHandeler} 
-        className='fixed rounded  duration-500 inset-0 fontEstedad bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center z-30'>
+        className='fixed rounded  duration-500 inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center z-30'>
         <div className='flex flex-col sm:w-[600px] h-[253px] bg-white rounded'>
             <div className='flex p-2 h-[84px] bg-[#EDEDED]'>
                 <h5 className='flex items-center m-[0_auto] text-xl font-bold leading-9'>جستجو</h5>

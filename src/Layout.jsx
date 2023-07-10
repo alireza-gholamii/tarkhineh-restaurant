@@ -7,7 +7,7 @@ import Footer from './components/home/Footer';
 
 const Layout = () => {
     return (
-        <div className='max-w-[1700px] m-[0_auto]'>
+        <div className='overflow-x-cli  fontEstedad max-w-[1440px] m-[0_auto]'>
             <header>
             <Navbar />
             </header>
