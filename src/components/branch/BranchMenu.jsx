@@ -43,13 +43,13 @@ const BranchMenu = ({ foods }) => {
                             }
                 <div
                     onClick={leftScroll}
-                    className='flex items-center justify-center cursor-pointer absolute top-[45%] left-6 text-xl sm:text-4x bg-white rounded-lg border-[1px] border-solid border-[#CBCBCB] w-10 h-10 text-white cursore-pointer'>
+                    className='hidden md:flex items-center justify-center cursor-pointer absolute top-[45%] left-6 text-xl sm:text-4x bg-white rounded-lg border-[1px] border-solid border-[#CBCBCB] w-10 h-10 text-white cursore-pointer'>
                     <img src={leftArrow} alt="arrow" />
                 </div>
                 <div
                     
                     onClick={rightScroll}
-                    className={`flex items-center justify-center rotate-180 cursor-pointer absolute top-[45%] right-6 text-xl sm:text-4xl bg-white rounded-lg border-[1px] border-solid border-[#CBCBCB] w-10 h-10 cursore-pointer`}>
+                    className={`hidden md:flex items-center justify-center rotate-180 cursor-pointer absolute top-[45%] right-6 text-xl sm:text-4xl bg-white rounded-lg border-[1px] border-solid border-[#CBCBCB] w-10 h-10 cursore-pointer`}>
                     <img src={leftArrow} alt="arrow" />
                 </div>
             </div>

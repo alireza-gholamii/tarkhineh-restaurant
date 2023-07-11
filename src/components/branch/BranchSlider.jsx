@@ -56,18 +56,23 @@ const BranchSlider = () => {
             </div>
             <div
                 onClick={nextSlide}  
-                className='group-hover:block cursor-pointer absolute hidden top-[45%] left-6 text-xl sm:text-4xl bg-black/20 text-white cursore-pointer'>
-                <img src={leftArrow} alt="arrow" />
+                className='group-hover:block cursor-pointer absolute hidden top-[45%] left-2 sm:left-6 text-xl sm:text-4xl bg-black/20 text-white cursore-pointer'>
+                <img className='w-6 sm:w-auto' src={leftArrow} alt="arrow" />
             </div>
             <div
                 onClick={preveSlide}
-                className='group-hover:block cursor-pointer absolute hidden top-[45%] right-6 text-xl sm:text-4xl text-white cursore-pointer'>
-                <img src={rightArrow} alt="arrow" />
+                className='group-hover:block cursor-pointer absolute hidden top-[45%] right-2 sm:right-6 text-xl sm:text-4xl text-white cursore-pointer'>
+                <img className='w-6 sm:w-auto' src={rightArrow} alt="arrow" />
             </div>
-            <div className='absolute justify-self-center content-end top-[160px] md:top-[81%] bg-white
-                            flex w-[830px] h-[130px] rounded-lg border-solid border-[3px] border-[#417F56] justify-center items-center md:m-[16px_auto] md:gap-x-[43px]'>
+            <div className='absolute justify-between  justify-self-center content-center top-[160px] md:top-[81%] bg-white
+                            flex flex-wrap md:flex-nowrap md:flex-co w-[88vw] md:w-[830px] 
+                            h-[60px] md:h-[130px] rounded-lg border-solid border-[3px]
+                            border-[#417F56] md:justify-center items-center md:m-[16px_auto]
+                            p-2 md:gap-x-[43px] gap-y-2'>
                 <Address text={["۰۲۱-۳۳۵۳۵۳۵۴" , "۰۲۱-۳۳۵۳۵۳۵۶"]} img={call}/>
-                <Address text={["شهرک اکباتان، فاز ۳، مجتمع تجاری کوروش، طبقه سوم"]} img={location}/>
+                <div className="order-first md:order-none h-[18px] w-[80vw] md:w-auto md:h-auto">
+                    <Address  text={["شهرک اکباتان، فاز ۳، مجتمع تجاری کوروش، طبقه سوم"]} img={location}/>
+                </div>
                 <Address text={["همه‌روزه از ساعت ۱۲  الی ۲۳ "]} img={clock}/>
             </div>
         </div>
@@ -77,18 +82,18 @@ const BranchSlider = () => {
 const Address = ({text , img}) => {
     return (
         <>
-            <div className='flex flex-col items-center gap-y-4 h-24 w-52'>
+            <div className='flex text-[6px] sm:text-[10px] md:text-base md:flex-col items-center gap-y-4 h-24 md:w-52'>
                 <div className=''>
-                    <img src={img} alt='logo'/>
+                    <img className='w-3 md:w-auto' src={img} alt='logo'/>
                 </div>
                 <div className='flex flex-col'>
                     {
-                        text.map(item => <span className='h-7 text-center'>{item}</span>)
+                        text.map(item => <span className='whitespace-nowrap md:whitespace-normal h-3 md:h-7 text-center'>{item}</span>)
                     }
                 </div>
             </div>
         </>
-    )
+    );
 }
 
 export default BranchSlider;

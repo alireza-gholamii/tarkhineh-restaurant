@@ -11,12 +11,12 @@ const BranchFood = ({foodData , border}) => {
     return (
         <div className='inline-block '>
             <div className={`flex bg-white flex-col m-[16px_auto] w-[168px] cursor-auto
-                            md:w-[20vw] h-[231px] sm:h-[433px]
+                            md:w-[20vw] h-[231px] sm:h-[433px] max-w-[228px]
                             border-solid ${border !== "#315F41" ? "border-[1px]": "border-[0px]"} border-[#CBCBCB] rounded-lg`}>
                 {/* card image */}
                 <img className='mb-1 h-[104px] sm:h-64' alt='food' src={image}/>
                 
-                <div className='flex flex-col p-4 sm:gap-4'>
+                <div className='flex flex-col md:p-4 p-[8px_8px_12px] sm:gap-4'>
                     <h5 className='flex justify-center 
                                 leading-[180%] sm:text-xl 
                                 text-xs sm:font-semibold'>
