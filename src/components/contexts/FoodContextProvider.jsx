@@ -70,7 +70,7 @@ const FoodContextProvider = ( {children} ) => {
                 },
                 {
                     id:4,
-                    image : offer5,
+                    image : offer3,
                     name:"پاستا سبزیجات",
                     price:"250000",
                     offer:"19",
@@ -119,7 +119,7 @@ const FoodContextProvider = ( {children} ) => {
                 },
                 {
                     id:9,
-                    image : offer5,
+                    image : offer3,
                     name:"پاستا سبزیجات",
                     price:"250000",
                     offer:"19",
@@ -168,7 +168,7 @@ const FoodContextProvider = ( {children} ) => {
                 },
                 {
                     id:15,
-                    image : offer5,
+                    image : offer3,
                     name:"پاستا سبزیجات",
                     price:"250000",
                     offer:"19",
@@ -217,7 +217,7 @@ const FoodContextProvider = ( {children} ) => {
                 },
                 {
                     id:20,
-                    image : offer5,
+                    image : offer3,
                     name:"پاستا سبزیجات",
                     price:"250000",
                     offer:"19",
@@ -273,7 +273,7 @@ const FoodContextProvider = ( {children} ) => {
                 },
                 {
                     id:25,
-                    image : popularF5,
+                    image : popularF3,
                     name:"پاکورا گیاهی",
                     price:"180000",
                     offer:"16",
@@ -322,7 +322,7 @@ const FoodContextProvider = ( {children} ) => {
                 },
                 {
                     id:30,
-                    image : popularF5,
+                    image : popularF3,
                     name:"پاکورا گیاهی",
                     price:"180000",
                     offer:"16",
@@ -371,7 +371,7 @@ const FoodContextProvider = ( {children} ) => {
                 },
                 {
                     id:35,
-                    image : popularF5,
+                    image : popularF3,
                     name:"پاکورا گیاهی",
                     price:"180000",
                     offer:"16",
@@ -420,7 +420,7 @@ const FoodContextProvider = ( {children} ) => {
                 },
                 {
                     id:40,
-                    image : popularF5,
+                    image : popularF3,
                     name:"پاکورا گیاهی",
                     price:"180000",
                     offer:"16",
@@ -476,7 +476,7 @@ const FoodContextProvider = ( {children} ) => {
                 },
                 {
                     id:45,
-                    image : IranianF5,
+                    image : IranianF3,
                     name:"سوپ پیاز",
                     price:"40000",
                     offer:"5",
@@ -525,7 +525,7 @@ const FoodContextProvider = ( {children} ) => {
                 },
                 {
                     id:50,
-                    image : IranianF5,
+                    image : IranianF3,
                     name:"سوپ پیاز",
                     price:"40000",
                     offer:"5",
@@ -574,7 +574,7 @@ const FoodContextProvider = ( {children} ) => {
                 },
                 {
                     id:55,
-                    image : IranianF5,
+                    image : IranianF3,
                     name:"سوپ پیاز",
                     price:"40000",
                     offer:"5",
@@ -623,7 +623,7 @@ const FoodContextProvider = ( {children} ) => {
                 },
                 {
                     id:60,
-                    image : IranianF5,
+                    image : IranianF3,
                     name:"سوپ پیاز",
                     price:"40000",
                     offer:"5",
