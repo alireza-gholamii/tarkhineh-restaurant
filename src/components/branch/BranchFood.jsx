@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 //img 
 import Like from "/assets/img/icons/Like.svg"
 import Rate from "/assets/img/icons/StarRate.svg"
+import trash from "/public/assets/img/icons/trash.svg"
+
+//context
+import { CartContext } from '../contexts/CartContextProvider';
+
+//functions
+import { isInCart, quantityCount } from '../../helper/function';
 
 const BranchFood = ({foodData , border}) => {
 
-    const {image , name , price , offer , rate , rateCount , intrested} = foodData;
+    const {state , dispatch} = useContext(CartContext);
+
+    const {id, image , name , price , offer , rate , rateCount , intrested} = foodData;
     
     return (
         <div className='inline-block '>
@@ -47,9 +56,34 @@ const BranchFood = ({foodData , border}) => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex items-center justify-center">
-                        <button  className='h-8 sm:h-10 w-[152px] sm:w-[17vw] max-w-[256px] text-white
+                    <div className="flex items-center justify-center duration-75">
+                        {
+                            isInCart(state , id) ? 
+                                <>
+                                    <button className='h-4 duration-75 sm:h-5 w-4 sm:w-5 max-w-[40px] text-white
+                                            rounded bg-[#417F56] flex items-center justify-center text-[15px] md:text-base' 
+                                            onClick={() => dispatch({type:"INCREASE" , payload : foodData})}>+</button>
+                                    <span className='duration-75'>{quantityCount(state , id)}</span>
+                                    {
+                                        quantityCount(state , id) > 1 ?
+                                            <button 
+                                                className='h-4 sm:h-5 w-4 sm:w-5 max-w-[40px] text-white
+                                                rounded bg-[#417F56] flex items-center justify-center text-[15px] md:text-base'
+                                                onClick={() => dispatch({type:"DECREASE" , payload : foodData})}>-</button>
+                                            :
+                                            <button
+                                                className="duration-75"
+                                                onClick={() => dispatch({type:"REMOVE_ITEM" , payload : foodData})}><img src={trash} alt="trashIcon" /></button>
+                                    }
+                                    
+                                </>
+                                :
+                                <button 
+                                onClick={() => dispatch({type:"ADD_ITEM" , payload : foodData})}
+                                        className='h-8 sm:h-10 w-[152px] sm:w-[17vw] max-w-[256px] text-white
                                             rounded bg-[#417F56] text-[10px] md:text-base'>افزودن به سبد خرید</button>
+                                
+                        }
                     </div>
                 </div>
                 

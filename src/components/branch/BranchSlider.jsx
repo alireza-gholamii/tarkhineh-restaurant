@@ -88,7 +88,7 @@ const Address = ({text , img}) => {
                 </div>
                 <div className='flex flex-col'>
                     {
-                        text.map(item => <span className='whitespace-nowrap md:whitespace-normal h-3 md:h-7 text-center'>{item}</span>)
+                        text.map(item => <span key={item} className='whitespace-nowrap md:whitespace-normal h-3 md:h-7 text-center'>{item}</span>)
                     }
                 </div>
             </div>

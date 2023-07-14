@@ -8,20 +8,23 @@ import Branch from "./components/branch/Branch.jsx"
 import "./styles/fonts.css"
 import Layout from './Layout';
 import FoodContextProvider from './components/contexts/FoodContextProvider';
+import CartContextProvider from './components/contexts/CartContextProvider';
 
 
 const App = () => {
   return (
     <div>
       <FoodContextProvider>
-        <Routes >
-          <Route path='/' element={<Layout />}>
-            <Route index element={<Homepage />}/>
-          </Route>
-            <Route path='/branch' element={<Layout />}>
-              <Route index element={<Branch />}/>
+        <CartContextProvider>
+          <Routes >
+            <Route path='/' element={<Layout />}>
+              <Route index element={<Homepage />}/>
             </Route>
-        </Routes>
+              <Route path='/branch' element={<Layout />}>
+                <Route index element={<Branch />}/>
+              </Route>
+          </Routes>
+        </CartContextProvider>
       </FoodContextProvider>
     </div>
   );

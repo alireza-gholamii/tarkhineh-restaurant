@@ -14,7 +14,7 @@ const Navbar = () => {
     const [showSearchModal , setShowSearchModal] = useState(false);
     return (
         <>
-           <div className='flex justify-between p-6 m-[0_3vw] h-[90px]'>
+           <div className='flex justify-between p-3 sm:p-6 sm:h-[90px] h-[50px]'>
                 
                 <div className="order-first md:order-2 flex">
                     
