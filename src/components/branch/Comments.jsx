@@ -91,7 +91,7 @@ const Comment = ({items}) => {
             <div className='flex flex-col gap-y-2'>
                 <img className='w-14 md:w-auto' src={profile} alt="profile" />
                 <div className='flex flex-col text-[6px] sm:text-base text-[#CBCBCB]'>
-                    <span>{name}</span>
+                    <span className='whitespace-nowrap'>{name}</span>
                     <span>{birth}</span>
                 </div>
             </div>

@@ -5,6 +5,7 @@ import footer from "/public/assets/img/footer.svg"
 import telegram from "/assets/img/icons/telegram.svg"
 import instagram from "/assets/img/icons/instagram.svg"
 import twitter from "/assets/img/icons/twitter.svg"
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -18,23 +19,23 @@ const Footer = () => {
                 >
                 <h5 className='sm:text-xl text-[10px] sm:font-bold'>دسترسی آسان</h5>
                 <ul className='flex flex-col text-[8px] sm:text-base gap-[16px]'>
-                    <li><a href="#"> پرسش‌های متداول</a></li>
-                    <li><a href="#"> قوانین ترخینه</a></li>
-                    <li><a href="#"> حریم خصوصی</a></li>
+                    <li><Link href="#"> پرسش‌های متداول</Link></li>
+                    <li><Link href="#"> قوانین ترخینه</Link></li>
+                    <li><Link href="#"> حریم خصوصی</Link></li>
                     <li className='flex justify-between'>
-                        <a className='w-4 sm:w-auto' href="#"><img src={telegram} alt="telegram" /></a>
-                        <a className='w-4 sm:w-auto' href="#"><img src={instagram} alt="instagram" /></a>
-                        <a className='w-4 sm:w-auto' href="#"><img src={twitter} alt="twitter" /></a>
+                        <Link className='w-4 sm:w-auto' href="#"><img src={telegram} alt="telegram" /></Link>
+                        <Link className='w-4 sm:w-auto' href="#"><img src={instagram} alt="instagram" /></Link>
+                        <Link className='w-4 sm:w-auto' href="#"><img src={twitter} alt="twitter" /></Link>
                     </li>
                 </ul>
             </div>
             <div className='flex flex-col justify-center gap-[16px] items-start text-white'>
                 <h5 className='sm:text-xl text-[10px] sm:font-bold'>شعبه های ترخینه</h5>
                 <ul className='flex flex-col text-[8px] sm:text-base gap-[16px]'>
-                    <li><a href="#"> شعبه اکباتان</a></li>
-                    <li><a href="#"> شعبه چالوس</a></li>
-                    <li><a href="#"> شعبه اقدسیه</a></li>
-                    <li><a href="#"> شعبه ونک</a></li>
+                    <li><Link href="#"> شعبه اکباتان</Link></li>
+                    <li><Link href="#"> شعبه چالوس</Link></li>
+                    <li><Link href="#"> شعبه اقدسیه</Link></li>
+                    <li><Link href="#"> شعبه ونک</Link></li>
                 </ul>
             </div>
             <div className='relative flex gap-[16px] flex-col justify-center text-white'>

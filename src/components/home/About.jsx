@@ -7,6 +7,7 @@ import diagram from "/assets/img/icons/diagram.svg"
 import homeWifi from "/assets/img/icons/home-wifi.svg"
 import menuBoard from "/assets/img/icons/menu-board.svg"
 import userSvg from "/public/assets/img/icons/userSvg.svg"
+import { Link } from 'react-router-dom';
 
 const About = () => {
     return (
@@ -19,7 +20,7 @@ const About = () => {
                 مهمان‌نوازی یکی از مهم‌ترین مشخصه‌های ایرانیان است و باعث افتخار ماست که بیش از 20 سال است خدمت‌گزار مردم شریف ایران هستیم. ما در رستوران‌های زنجیره‌ای ترخینه همواره تلاش کردیم که در محیطی اصیل بر پایه معماری و طراحی مدرن در کنار طبیعتی دلنواز، غذایی سالم و درخور شان شما عزیزان ارائه دهیم.
                 </p>
                 <div className='flex justify-end sm:w-[78%] w-[88%] mt-2'>
-                     <a className='border-solid border-[1px] w-[154px] sm:w-[184] h-[32px] sm:h-[40px] flex row gap-2 justify-center items-center border-white rounded ' href='#'>اطلاعات بیشتر<img className='sm:w-[24px] w-[16px]' src={arrowLeft}/></a>
+                     <Link className='border-solid border-[1px] w-[154px] sm:w-[184] h-[32px] sm:h-[40px] flex row gap-2 justify-center items-center border-white rounded ' href='#'>اطلاعات بیشتر<img className='sm:w-[24px] w-[16px]' src={arrowLeft}/></Link>
                 </div>
             </div>
             <div>

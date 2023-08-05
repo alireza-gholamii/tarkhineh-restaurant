@@ -22,7 +22,7 @@ const BranchMenu = ({ foods }) => {
         () => {
             scroller.current.scrollLeft > 1 ? rightVisable = "flex" : rightVisable = "hidden";
         }
-    )
+        )
 
     return (
         <div className={`relative bg-[${foods[1]}] pr-[3vw] md:h-[550px]`}>
@@ -34,7 +34,7 @@ const BranchMenu = ({ foods }) => {
             </div>
             <div
                 ref={scroller}
-                className='flex h-full gap-x-3 sm:gap-x-4 scrollbar-hide overflow-x-scroll scroll whitespace-nowrap scroll-smooth'>
+                className={`bg-[${foods[1]}] flex h-full gap-x-3 sm:gap-x-4 scrollbar-hide overflow-x-scroll scroll whitespace-nowrap scroll-smooth`}>
                 {
                     foods[2].map(
                         (item , index) =>

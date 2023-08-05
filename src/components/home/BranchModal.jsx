@@ -34,10 +34,10 @@ const BranchModal = ({ isVisible , onClose }) => {
                 </div>
                 <div className='sm:m-[0_24px] m-[0_16px]'>
                     <div className='flex sm:flex-row sm:gap-x-5 gap-y-2 flex-col sm:w-auto w-[80%] '>
-                        <Branch gallery={gallery} img={image1} name={"شعبه ونک"} address={"میدان ونک، خیابان فردوسی، نبش کوچه نیلوفر، پلاک ۲۶"}/>
-                        <Branch gallery={gallery} img={image1} name={"شعبه اقدسیه"} address={"خیابان اقدسیه ، نرسیده به میدان خیام، پلاک ۸"}/>
-                        <Branch gallery={gallery} img={image2} name={"شعبه چالوس"} address={"چالوس، خیابان ۱۷ شهریور، بعد کوچه کوروش، جنب داروخانه دکتر میلانی"}/>
-                        <Branch gallery={gallery} img={image2} name={"شعبه اکباتان"} address={"شهرک اکباتان، فاز ۳، مجتمع تجاری کوروش، طبقه سوم"}/>    
+                        <Branch onClose={onClose} gallery={gallery} img={image1} name={"شعبه ونک"} address={"میدان ونک، خیابان فردوسی، نبش کوچه نیلوفر، پلاک ۲۶"}/>
+                        <Branch onClose={onClose} gallery={gallery} img={image1} name={"شعبه اقدسیه"} address={"خیابان اقدسیه ، نرسیده به میدان خیام، پلاک ۸"}/>
+                        <Branch onClose={onClose} gallery={gallery} img={image2} name={"شعبه چالوس"} address={"چالوس، خیابان ۱۷ شهریور، بعد کوچه کوروش، جنب داروخانه دکتر میلانی"}/>
+                        <Branch onClose={onClose} gallery={gallery} img={image2} name={"شعبه اکباتان"} address={"شهرک اکباتان، فاز ۳، مجتمع تجاری کوروش، طبقه سوم"}/>    
                     </div>
                 </div>
             </div>
@@ -45,15 +45,24 @@ const BranchModal = ({ isVisible , onClose }) => {
     );
 };
 
-const Branch = ({img , name , address, gallery}) => {
+const Branch = ({img , name , address, gallery , onClose}) => {
+    const splitedName = name.split(" ");
+    
     return (
-        <Link to="/branch" className='relative group flex sm:grid sm:m-[15px_auto] bg-white sm:w-[13vw] w-[80vw] sm:h-[260x] rounded border-solid border-[#CBCBCB] hover:border-[#417F56] border-[1px]'>
-            <img className="sm:h-auto w-[35vw] h-[10vh] sm:w-auto" alt='picture' src={img}/>
-            <img className='hidden sm:group-hover:block absolute top-[22%] right-[43%]' src={gallery} alt="picture"/>
-            <img className='flex sm:hidden absolute top-[80%] right-[2%]' src={expend} alt="expand" />
-            <div className='flex flex-col justify-center'>
-                <h5 className='flex items-center justify-center sm:font-bold text-xs '>{name}</h5>
-                <span className='flex mb-2 sm:text-sm text-center items-center text-[10px] justify-center'>{address}</span>    
+        <Link  
+            onClick={() => onClose()} to={`/branch/${splitedName[1]}`} 
+            >
+            <div
+                className='relative group flex sm:grid sm:m-[15px_auto] bg-white sm:w-[13vw] w-[80vw] 
+                sm:h-[240px] rounded border-solid border-[#CBCBCB] hover:border-[#417F56] border-[1px]'>
+            
+                <img className="sm:h-auto h-[10vh] sm:w-auto" alt='picture' src={img}/>
+                <img className='hidden sm:group-hover:block absolute top-[22%] right-[43%]' src={gallery} alt="picture"/>
+                <img className='flex sm:hidden absolute top-[80%] right-[2%]' src={expend} alt="expand" />
+                <div className='flex flex-col justify-center'>
+                    <h5 className='flex items-center justify-center sm:font-bold text-xs '>{name}</h5>
+                    <span className='flex mb-2 sm:text-sm text-center items-center text-[10px] justify-center'>{address}</span>    
+                </div>
             </div>
         </Link>
     )

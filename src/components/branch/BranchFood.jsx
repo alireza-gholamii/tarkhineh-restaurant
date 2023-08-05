@@ -5,6 +5,10 @@ import Like from "/assets/img/icons/Like.svg"
 import Rate from "/assets/img/icons/StarRate.svg"
 import trash from "/public/assets/img/icons/trash.svg"
 
+//img
+import GrTrash from "/public/assets/img/icons/GrTrash.svg"
+
+
 //context
 import { CartContext } from '../contexts/CartContextProvider';
 
@@ -49,39 +53,41 @@ const BranchFood = ({foodData , border}) => {
                             <div className='flex items-center'>
                                 <img className='ml-1' src={Rate} alt="star" />
                                 <span className='sm:text-sm text-[10px]'>{rate}</span>
-                                <span className='hidden md:block text-[10px] text-[]'>{rateCount}</span>
+                                <span className='hidden md:block text-[10px] text-[]'>({rateCount})</span>
                             </div>
                             <div>
                                 <span className='text-[10px] sm:text-base'>{price} تومان</span>
                             </div>
                         </div>
                     </div>
-                    <div className="flex items-center justify-center duration-75">
+                    <div className="flex items-center justify-center ">
                         {
                             isInCart(state , id) ? 
-                                <>
-                                    <button className='h-4 duration-75 sm:h-5 w-4 sm:w-5 max-w-[40px] text-white
-                                            rounded bg-[#417F56] flex items-center justify-center text-[15px] md:text-base' 
-                                            onClick={() => dispatch({type:"INCREASE" , payload : foodData})}>+</button>
-                                    <span className='duration-75'>{quantityCount(state , id)}</span>
-                                    {
-                                        quantityCount(state , id) > 1 ?
-                                            <button 
-                                                className='h-4 sm:h-5 w-4 sm:w-5 max-w-[40px] text-white
-                                                rounded bg-[#417F56] flex items-center justify-center text-[15px] md:text-base'
-                                                onClick={() => dispatch({type:"DECREASE" , payload : foodData})}>-</button>
-                                            :
-                                            <button
-                                                className="duration-75"
-                                                onClick={() => dispatch({type:"REMOVE_ITEM" , payload : foodData})}><img src={trash} alt="trashIcon" /></button>
-                                    }
+                                <div
+                                    className='h-8 w-12 flex items-center justify-between 
+                                    border border-[#E5F2E9] bg-[#E5F2E9] rounded sm:gap-2 duration-75'>
+                                    <button className='flex items-center duration-75 sm:h-5 sm:w-6 max-w-[50px]
+                                                 text-bg-primary text-[15px] md:text-base' 
+                                        onClick={() => dispatch({type:"INCREASE" , payload : foodData})}>+</button>
+                                        <span className='text-bg-primary duration-75'>{quantityCount(state , id)}</span>
+                                        {
+                                            quantityCount(state , id) > 1 ?
+                                                <button
+                                                    className='flex items-center sm:h-5 sm:w-5 max-w-[40px]
+                                                    text-bg-primary text-[15px] md:text-base'
+                                                    onClick={() => dispatch({type:"DECREASE" , payload : foodData})}>-</button>
+                                                :
+                                                <button
+                                                    className="duration-75"
+                                                    onClick={() => dispatch({type:"REMOVE_ITEM" , payload : foodData})}><img className='md:w-32 w-4' src={GrTrash} alt="trashIcon" /></button>
+                                        }
                                     
-                                </>
+                                </div>
                                 :
                                 <button 
                                 onClick={() => dispatch({type:"ADD_ITEM" , payload : foodData})}
                                         className='h-8 sm:h-10 w-[152px] sm:w-[17vw] max-w-[256px] text-white
-                                            rounded bg-[#417F56] text-[10px] md:text-base'>افزودن به سبد خرید</button>
+                                            rounded bg-green-primary text-[10px] md:text-base'>افزودن به سبد خرید</button>
                                 
                         }
                     </div>

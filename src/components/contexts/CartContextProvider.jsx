@@ -9,19 +9,24 @@ const initialState = {
 
 const sumItems = items => {
     const itemsCounter = items.reduce((total, product) => total + product.quantity, 0);
-    let total = items.reduce((total, product) => total + product.price * product.quantity, 0).toFixed(2);
+    let total = items.reduce((total, product) => total + product.price * product.quantity, 0).toFixed(0);
     return {itemsCounter, total}
 }
 
 const cartReducer = (state, action) => {
-    console.log(action.type)
     switch(action.type) {
+        case "MOUNTING" :
+            const mount =  window.localStorage.getItem("foods");
+            return {
+                ...JSON.parse(mount)
+            }
         case "ADD_ITEM":
             if (!state.selectedItems.find(item => item.id === action.payload.id)) {
                 state.selectedItems.push({
                     ...action.payload,
                     quantity: 1
                 })
+                localStorage.setItem("foods" , JSON.stringify(state))
             }
             return {
                 ...state,
@@ -31,29 +36,33 @@ const cartReducer = (state, action) => {
             }
         case "REMOVE_ITEM":
             const newSelectedItems = state.selectedItems.filter(item => item.id !== action.payload.id);
+            localStorage.setItem("foods" , JSON.stringify(state))
             return {
                 ...state,
                 selectedItems: [...newSelectedItems],
                 ...sumItems(newSelectedItems)
-
             }
         case "INCREASE":
             const indexI = state.selectedItems.findIndex(item => item.id === action.payload.id);
             state.selectedItems[indexI].quantity++;
+            localStorage.setItem("foods" , JSON.stringify(state))
             return {
                 ...state,
                 ...sumItems(state.selectedItems)
 
             }
+            
         case "DECREASE":
             const indexD = state.selectedItems.findIndex(item => item.id === action.payload.id);
             state.selectedItems[indexD].quantity--;
+            localStorage.setItem("foods" , JSON.stringify(state))
             return {
                 ...state,
                 ...sumItems(state.selectedItems)
 
             }
         case "CHECKOUT" :
+            window.localStorage.removeItem("foods");
             return {
                 selectedItems: [],
                 itemsCounter: 0,
@@ -61,6 +70,7 @@ const cartReducer = (state, action) => {
                 checkout: true
             }
         case "CLEAR":
+            window.localStorage.setItem("foods" , JSON.stringify(initialState));
             return {
                 selectedItems: [],
                 itemsCounter: 0,
